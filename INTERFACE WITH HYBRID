@@ -1,0 +1,29 @@
+interface Shape {
+    double area();
+    double perimeter();
+}
+
+class Circle implements Shape {
+    double r;
+
+    Circle(double r) {
+        this.r = r;
+    }
+
+    public double area() {
+        return 3.14 * r * r;
+    }
+
+    public double perimeter() {
+        return 2 * 3.14 * r;
+    }
+}
+
+class Shape{
+    public static void main(String[] args) {
+        Circle c = new Circle(5);   
+        
+        System.out.println("Area: " + c.area());
+        System.out.println("Perimeter: " + c.perimeter());
+    }
+}
